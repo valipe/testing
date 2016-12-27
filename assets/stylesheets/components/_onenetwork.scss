@@ -1,18 +1,18 @@
 .one-network-component {
-    padding: 50px 0 30px;
-	margin: 0;
+    padding: 30px 0 20px;
+    margin: 0;
     @media screen and (min-width: 0px) and (max-width: 1023px) {
         padding: 30px 0;
     }
     .component-header {
         max-width: 980px;
-        margin: 30px auto 40px;
+        margin: 20px auto 40px;
         .grid-primary-heading {
             text-transform: uppercase;
         }
         .grid-paragraph {
             padding-top: 4px;
-            color:#fafdfd;
+            color: #fafdfd;
         }
         @media screen and (min-width: 0px) and (max-width: 990px) {
             margin: 0 auto;
@@ -36,9 +36,10 @@
                     vertical-align: middle;
                     letter-spacing: -2px;
                     line-height: 85px;
-                     @media screen and (min-width: 0px) and (max-width: 990px) {
-                 font-size: 85px;
-            }
+                    @media screen and (min-width: 0px) and (max-width: 990px) {
+                        font-size: 85px;
+                        letter-spacing: -3px;
+                    }
                 }
                 .plus-symbol {
                     display: table-cell;
@@ -53,8 +54,6 @@
                 font-size: 20px;
                 line-height: 22px;
             }
-           
-            
         }
         .doctors-list-block {
             padding: 0 60px 0 60px;
@@ -65,7 +64,6 @@
                 img {
                     width: 100%;
                 }
-                
             }
         }
         .location-list-block {
@@ -132,42 +130,38 @@
             }
         }
         @media screen and (min-width: 0px) and (max-width: 990px) {
-           
+            padding: 0;
+            .doctors-list-block {
+                max-width: 290px;
+                float: none;
+                margin: 30px auto 30px;
+                display: table;
                 padding: 0;
-                .doctors-list-block {
-                    max-width: 290px;
-                    float: none;
-                    margin: 30px auto 30px;
-                    display: table;
-                    padding: 0;
-                }
-                .location-list-block {
-                   max-width: 290px;
-                    float: none;
-                    margin: 60px auto 60px;
-                    //display: table;
-                    padding: 0;
-                    .editable-number{
-                        margin: 0 0 0 15px;
-                        .value-number{
-                            font-size: 114px;
-                            line-height: 110px;
-                        }
-                    }
-
-                    
-                }
-                .expertise-info-block {
-                    float: none;
-                    margin: 30px auto 30px;
-                    display: table;
-                    padding: 0;
-                    .expertise-info-block-inner{
-                        display: table;
-                        margin: 0 auto;
+            }
+            .location-list-block {
+                max-width: 290px;
+                float: none;
+                margin: 40px auto 40px;
+                //display: table;
+                padding: 0;
+                .editable-number {
+                    margin: 0px 0 0 20px;
+                    .value-number {
+                        font-size: 105px;
+                        line-height: 96px;
                     }
                 }
-           
+            }
+            .expertise-info-block {
+                float: none;
+                margin: 30px auto 30px;
+                display: table;
+                padding: 0;
+                .expertise-info-block-inner {
+                    display: table;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 }

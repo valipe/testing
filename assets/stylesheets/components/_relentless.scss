@@ -1,13 +1,13 @@
 /*  relentless Component csss  */
 
 .relentless-component {
-    padding: 40px 0 30px;
+    padding: 30px 0 20px;
     @media screen and (min-width: 0px) and (max-width: 767px) {
         padding: 25px 0;
     }
     .component-header {
         max-width: 980px;
-        margin: 30px auto 40px;
+        margin: 20px auto 40px;
         .grid-primary-heading {
             text-transform: uppercase;
         }
@@ -32,7 +32,7 @@
             text-align: center;
             color: $white;
             margin: 15px 0 30px;
-            color:#fcfafa;
+            color: #fcfafa;
             @media screen and (min-width: 0px) and (max-width: 1023px) {
                 margin: 15px 0 30px;
             }
@@ -42,7 +42,6 @@
                 margin-bottom: 30px;
                 padding: 0;
             }
-            
             ul {
                 li {
                     font: 20px/1.2 $Primary_font;
@@ -69,8 +68,8 @@
                 margin-bottom: 20px;
             }
         }
-        .grid1{
-            .grid-title{
+        .grid1 {
+            .grid-title {
                 text-align: left;
                 margin-left: 90px;
                 @media screen and (min-width: 0px) and (max-width: 990px) {
@@ -88,10 +87,10 @@
                     margin-bottom: 5px;
                 }
             }
-            img{
-                max-width:152px;
+            img {
+                max-width: 152px;
                 @media screen and (min-width: 0px) and (max-width: 767px) {
-                    max-width:none;
+                    max-width: none;
                 }
             }
         }
@@ -116,7 +115,7 @@
                     vertical-align: middle;
                     padding: 0 0 0 15px;
                 }
-                img{
+                img {
                     margin-bottom: 0;
                 }
             }

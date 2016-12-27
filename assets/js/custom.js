@@ -1,16 +1,13 @@
 $(window).on('load resize', function () {
-   var  header_height = $('.header').height();
+    var header_height = $('.header').height();
     $('.inside-look-component').css({
         marginTop: header_height
     , });
-   
-   
 });
 window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 }
 $(function () {
-    
     $("#nav").tinyNav();
     $(window).bind('scroll', function () {
         /*if ($(window).scrollTop() > 15) {
@@ -48,21 +45,18 @@ $(function () {
         }
     });
 });
-
-
 //goto form component on click on "READ FULL REPORT"
-$(".goto-form-component").click(function(event){
+$(".goto-form-component").click(function (event) {
     event.preventDefault();
-	var sectionId = $(this).attr("href");
-	
-	var headerHeight = $('.header').outerHeight(true);
-	var navHeight = $('.navigation').outerHeight(true);
-	var currentSectionOffsetTop = $(sectionId).offset().top - headerHeight;
-	
-	//goto related section with animation
-	$("html, body").animate({ scrollTop: currentSectionOffsetTop  }, 1000);
+    var sectionId = $(this).attr("href");
+    var headerHeight = $('.header').outerHeight(true);
+    var navHeight = $('.navigation').outerHeight(true);
+    var currentSectionOffsetTop = $(sectionId).offset().top - headerHeight;
+    //goto related section with animation
+    $("html, body").animate({
+        scrollTop: currentSectionOffsetTop
+    }, 1000);
 });
-
 //goto related section based on id of section inside variable "sectionId" as parameter
 $(".inside-look-component .navigation ul li a").click(function (event) {
     event.preventDefault();
@@ -73,32 +67,31 @@ $(".inside-look-component .navigation ul li a").click(function (event) {
     goToPageSection(sectionId);
 });
 
-function goToPageSection(sectionId){
-	var headerHeight = $('.header').outerHeight(true);
-	var navHeight = $('.navigation').outerHeight(true);
-	var currentSectionOffsetTop = $(sectionId).offset().top - headerHeight - navHeight;
-	
-	//goto related section with animation
-	$("html, body").animate({ scrollTop: currentSectionOffsetTop  }, 700);
-}
-
 function goToPageSection(sectionId) {
     var headerHeight = $('.header').outerHeight(true);
     var navHeight = $('.navigation').outerHeight(true);
     var currentSectionOffsetTop = $(sectionId).offset().top - headerHeight - navHeight;
     //goto related section with animation
-    
-	if(navigator.userAgent.search("Firefox") > -1){
-		$("html, body").animate({
-			scrollTop: currentSectionOffsetTop + 5
-		}, 300);
-	}
-	else{
-		$("html, body").animate({
-			scrollTop: currentSectionOffsetTop
-		}, 300);
-	}
+    $("html, body").animate({
+        scrollTop: currentSectionOffsetTop + 5
+    }, 1000);
 }
+/* function goToPageSection(sectionId) {
+    var headerHeight = $('.header').outerHeight(true);
+    var navHeight = $('.navigation').outerHeight(true);
+    var currentSectionOffsetTop = $(sectionId).offset().top - headerHeight - navHeight;
+    //goto related section with animation
+    if (navigator.userAgent.search("Firefox") > -1) {
+        $("html, body").animate({
+            scrollTop: currentSectionOffsetTop + 5
+        }, 300);
+    }
+    else {
+        $("html, body").animate({
+            scrollTop: currentSectionOffsetTop
+        }, 300);
+    }
+} */
 $(document).on("scroll", onScroll);
 //set navigation active based on content on scrolling
 function onScroll(event) {
@@ -118,3 +111,15 @@ function onScroll(event) {
         }
     });
 }
+
+////on load top
+$(document).ready(function () {
+    var url = window.location.href;
+    console.log(url);
+    if (url.indexOf('#') < 0) {
+        window.location.replace(url + "#");
+    }
+    else {
+        window.location.replace(url);
+    }
+});

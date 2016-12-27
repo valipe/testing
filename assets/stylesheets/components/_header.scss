@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 999;
     .primary_bar {
         p {
             font: 20px/1 $AvenirRoman;
@@ -13,7 +13,8 @@
             a {
                 color: $white;
                 padding: 0 2px;
-                &:hover {
+                &:hover,
+                &:focus {
                     text-decoration: none;
                 }
             }
@@ -27,7 +28,7 @@
         }
     }
     .secoundary_bar {
-        padding: 30px 0;
+        padding: 31px 0;
         transition: all 0.5s ease;
         -webkit-transition: all 0.5s ease;
         -moz-transition: all 0.5s ease;
@@ -38,6 +39,10 @@
             margin: 0;
             .grid {
                 padding-left: 30px;
+                img {
+                    width: 100%;
+                    max-width: 345px;
+                }
                 .refer-text {
                     margin: 0;
                     font: 20px/1 $AvenirRoman;
@@ -50,18 +55,18 @@
                     }
                 }
             }
-			.second-grid{
-				padding-right: 30px;
-				.refer-text {
-					text-align: right;
-				}
-				@media screen and (min-width: 0px) and (max-width: 767px) {
-					padding-right: 0;
-					.refer-text {
-						text-align: center;
-					}
-				}
-			}
+            .second-grid {
+                padding-right: 30px;
+                .refer-text {
+                    text-align: right;
+                }
+                @media screen and (min-width: 0px) and (max-width: 767px) {
+                    padding-right: 0;
+                    .refer-text {
+                        text-align: center;
+                    }
+                }
+            }
         }
         @media screen and (min-width: 0px) and (max-width: 767px) {
             padding: 22px;
@@ -84,30 +89,31 @@
 /*-----inside look component css------*/
 
 .inside-look-component {
-    transition: all 0.5s ease;
+    /*   transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    padding: 50px 0;
+    -moz-transition: all 0.5s ease;*/
+    padding: 40px 0;
+    margin-top: 175px;
     .grid-secondary-heading {
         margin-bottom: 15px;
         text-transform: uppercase;
-        color:#fdf8f8;
+        color: #fdf8f8;
     }
     .grid-primary-heading {
         margin-bottom: 5px;
         text-transform: uppercase;
-        color:#fdf8f8;
+        color: #fdf8f8;
     }
     .grid-paragraph {
         padding: 0;
-        color:#fcf8f8;
+        color: #fcf8f8;
     }
     .tinynav {
         display: none
     }
     .navigation {
         clear: both;
-        padding: 15px 0 0 0;
+        padding: 0;
         ul {
             display: table;
             margin: 10px auto;
@@ -150,7 +156,7 @@
                 background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #c9c9c9 100%);
                 //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9c9c9', GradientType=0);
                 background-repeat: no-repeat;
-               /* &:after {
+                /* &:after {
                     content: '';
                     position: absolute;
                     top: 0;
@@ -184,8 +190,8 @@
                     outline: none;
                 }
                 select::-ms-expand {
-                        display: none;
-                    }
+                    display: none;
+                }
             }
         }
     }

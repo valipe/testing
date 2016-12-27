@@ -6145,12 +6145,18 @@ h1, h2, h3, h4, h5, h6 {
 .float-none {
   float: none; }
 
+[data-aos^=flip][data-aos^=flip] {
+  backface-visibility: hidden !important;
+  transition-property: transform;
+  -webkit-backface-visibility: hidden !important;
+  /* Chrome, Safari, Opera */ }
+
 /* header css */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 99; }
+  z-index: 999; }
   .header .primary_bar p {
     font: 20px/1 "AvenirRoman", Arial, Helvetica, sans-serif;
     padding: 11px;
@@ -6158,7 +6164,7 @@ h1, h2, h3, h4, h5, h6 {
     .header .primary_bar p a {
       color: #ffffff;
       padding: 0 2px; }
-      .header .primary_bar p a:hover {
+      .header .primary_bar p a:hover, .header .primary_bar p a:focus {
         text-decoration: none; }
     .header .primary_bar p a:first-child {
       border-bottom: 1px solid #fff; }
@@ -6167,7 +6173,7 @@ h1, h2, h3, h4, h5, h6 {
         font: 12px/1 "AvenirRoman", Arial, Helvetica, sans-serif;
         padding: 11px 5px; } }
   .header .secoundary_bar {
-    padding: 30px 0;
+    padding: 31px 0;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -6178,6 +6184,9 @@ h1, h2, h3, h4, h5, h6 {
       margin: 0; }
       .header .secoundary_bar .logo-block .grid {
         padding-left: 30px; }
+        .header .secoundary_bar .logo-block .grid img {
+          width: 100%;
+          max-width: 345px; }
         .header .secoundary_bar .logo-block .grid .refer-text {
           margin: 0;
           font: 20px/1 "AvenirRoman", Arial, Helvetica, sans-serif;
@@ -6209,10 +6218,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /*-----inside look component css------*/
 .inside-look-component {
-  transition: all 0.5s ease;
+  /*   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  padding: 50px 0; }
+  -moz-transition: all 0.5s ease;*/
+  padding: 40px 0;
+  margin-top: 175px; }
   .inside-look-component .grid-secondary-heading {
     margin-bottom: 15px;
     text-transform: uppercase;
@@ -6228,7 +6238,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none; }
   .inside-look-component .navigation {
     clear: both;
-    padding: 15px 0 0 0; }
+    padding: 0; }
     .inside-look-component .navigation ul {
       display: table;
       margin: 10px auto; }
@@ -6265,16 +6275,16 @@ h1, h2, h3, h4, h5, h6 {
         background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #c9c9c9 100%);
         background-repeat: no-repeat;
         /* &:after {
-             content: '';
-             position: absolute;
-             top: 0;
-             right: 0;
-             background-image: url(../../images/select-dropdown-icon.png);
-             background-repeat: no-repeat;
-             background-position: right;
-             width: 25px;
-             height: 25px;
-         }*/ }
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: url(../../images/select-dropdown-icon.png);
+            background-repeat: no-repeat;
+            background-position: right;
+            width: 25px;
+            height: 25px;
+        }*/ }
         .inside-look-component .navigation .select-style select {
           padding: 0px 10px;
           width: 100%;
@@ -6338,7 +6348,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "AvenirBlack", Arial, Helvetica, sans-serif; }
 
 .outcomes-component {
-  padding: 63px 0 20px 0;
+  padding: 50px 0 20px 0;
   /* tavr-outcomes */ }
   @media screen and (min-width: 0px) and (max-width: 767px) {
     .outcomes-component {
@@ -6348,7 +6358,7 @@ h1, h2, h3, h4, h5, h6 {
   .outcomes-component .grid-tertiary-heading {
     color: #231f20; }
   .outcomes-component .grid-description {
-    padding: 0 0 95px 0; }
+    padding: 0 0 60px 0; }
     @media screen and (min-width: 0px) and (max-width: 1023px) {
       .outcomes-component .grid-description {
         padding: 0 0 35px 0; } }
@@ -6465,13 +6475,13 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 77%;
         /* padding-top: 10px; */
         margin-right: -25px;
-        /* sup{
-        	line-height: inherit;
-        	font-family: inherit;
-        	font-size: 50px;
-        	line-height: 80%;
-        	display: inline-block;
-        } */ }
+                        /* sup{
+							line-height: inherit;
+							font-family: inherit;
+							font-size: 50px;
+							line-height: 80%;
+							display: inline-block;
+						} */ }
         @media screen and (min-width: 0px) and (max-width: 767px) {
           .outcomes-component .grid-transplant-rate-and-readmissions .grid-cabg-readmissions .grid-cabg-readmissions-inner .desc-container .desc-number.percentage-number {
             font-size: 144px; } }
@@ -6500,7 +6510,7 @@ h1, h2, h3, h4, h5, h6 {
             .outcomes-component .grid-transplant-rate-and-readmissions .grid-cabg-readmissions .grid-cabg-readmissions-inner .arrow-container .arrow {
               width: 96px; } }
   .outcomes-component .tavr-outcomes {
-    margin-top: 60px; }
+    margin-top: 40px; }
     @media screen and (min-width: 0px) and (max-width: 767px) {
       .outcomes-component .tavr-outcomes {
         margin-top: 55px; } }
@@ -6603,14 +6613,14 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 25px; } }
 
 .one-network-component {
-  padding: 50px 0 30px;
+  padding: 30px 0 20px;
   margin: 0; }
   @media screen and (min-width: 0px) and (max-width: 1023px) {
     .one-network-component {
       padding: 30px 0; } }
   .one-network-component .component-header {
     max-width: 980px;
-    margin: 30px auto 40px; }
+    margin: 20px auto 40px; }
     .one-network-component .component-header .grid-primary-heading {
       text-transform: uppercase; }
     .one-network-component .component-header .grid-paragraph {
@@ -6639,7 +6649,8 @@ h1, h2, h3, h4, h5, h6 {
           line-height: 85px; }
           @media screen and (min-width: 0px) and (max-width: 990px) {
             .one-network-component .component-body .custom-editable-number .editable-number .value-number {
-              font-size: 85px; } }
+              font-size: 85px;
+              letter-spacing: -3px; } }
         .one-network-component .component-body .custom-editable-number .editable-number .plus-symbol {
           display: table-cell;
           font-size: 30px;
@@ -6717,13 +6728,13 @@ h1, h2, h3, h4, h5, h6 {
         .one-network-component .component-body .location-list-block {
           max-width: 290px;
           float: none;
-          margin: 60px auto 60px;
+          margin: 40px auto 40px;
           padding: 0; }
           .one-network-component .component-body .location-list-block .editable-number {
-            margin: 0 0 0 15px; }
+            margin: 0px 0 0 20px; }
             .one-network-component .component-body .location-list-block .editable-number .value-number {
-              font-size: 114px;
-              line-height: 110px; }
+              font-size: 105px;
+              line-height: 96px; }
         .one-network-component .component-body .expertise-info-block {
           float: none;
           margin: 30px auto 30px;
@@ -6735,7 +6746,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* experts component scss */
 .experts-component {
-  padding-top: 90px;
+  padding-top: 50px;
   /* people details */ }
   @media screen and (min-width: 0px) and (max-width: 1023px) {
     .experts-component {
@@ -6821,20 +6832,20 @@ h1, h2, h3, h4, h5, h6 {
       max-width: initial;
       width: 413px; } }
   .experts-component .button {
-    margin: 65px auto 65px auto; }
+    margin: 50px auto 50px auto; }
     @media screen and (min-width: 0px) and (max-width: 1023px) {
       .experts-component .button {
-        margin: 40px auto 61px auto; } }
+        margin: 40px auto 50px auto; } }
 
 /*  relentless Component csss  */
 .relentless-component {
-  padding: 40px 0 30px; }
+  padding: 30px 0 20px; }
   @media screen and (min-width: 0px) and (max-width: 767px) {
     .relentless-component {
       padding: 25px 0; } }
   .relentless-component .component-header {
     max-width: 980px;
-    margin: 30px auto 40px; }
+    margin: 20px auto 40px; }
     .relentless-component .component-header .grid-primary-heading {
       text-transform: uppercase; }
     .relentless-component .component-header .grid-paragraph {
